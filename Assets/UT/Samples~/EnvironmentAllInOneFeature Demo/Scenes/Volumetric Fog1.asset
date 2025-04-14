@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 612e70f49e5124da0a95111a57250300, type: 3}
+  m_Name: Volumetric Fog1
+  m_EditorClassIdentifier: 
+  raymarchQuality: 7
+  jittering: 1.36
+  renderQueue: 3100
+  sortingLayerID: 0
+  sortingOrder: 12
+  noiseTexture: {fileID: 2800000, guid: 9c79340e1a1054275ba04070a27de306, type: 3}
+  noiseStrength: 0.18
+  noiseScale: 96.4
+  noiseFinalMultiplier: 1
+  useDetailNoise: 1
+  detailTexture: {fileID: 11700000, guid: 950add8d241c6479bbab1f10e1035d60, type: 2}
+  detailScale: 0.8
+  detailStrength: 0
+  density: 0.005
+  shape: 0
+  border: 1
+  verticalOffset: -67.4
+  distance: 31.49
+  distanceFallOff: 0.149
+  albedo: {r: 0.76100624, g: 0.9757542, b: 1, a: 1}
+  brightness: 49.4
+  deepObscurance: 0.397
+  specularColor: {r: 0.9622642, g: 0.9622642, b: 0.9622642, a: 1}
+  specularThreshold: 0.81
+  specularIntensity: 0.873
+  turbulence: 0.73
+  windDirection: {x: 0, y: 0, z: 0}
+  lightDiffusionPower: 20.6
+  lightDiffusionIntensity: 0.409
+  receiveShadows: 0
+  shadowIntensity: 0.374
+  textureData: {fileID: 11400000, guid: b4e256e2be91a8e499f329404e7e1349, type: 2}

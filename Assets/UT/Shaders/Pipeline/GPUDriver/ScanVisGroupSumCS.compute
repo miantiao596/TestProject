@@ -1,0 +1,73 @@
+#pragma kernel CSMain
+// #pragma enable_d3d11_debug_symbols
+
+#define THREAD_GROUP_SIZE_X 512
+#define THREAD_GROUP_SIZE_Y 1
+#define THREAD_GROUP_SIZE_Z 1
+
+cbuffer CB
+{
+    int _NumOfGroups;
+    groupshared uint temp[2 * THREAD_GROUP_SIZE_X];
+}
+
+StructuredBuffer<uint> _GroupSumArray;
+RWStructuredBuffer<uint> _GroupSumArrayOut;
+
+[numthreads(THREAD_GROUP_SIZE_X,THREAD_GROUP_SIZE_Y,THREAD_GROUP_SIZE_Z)]
+void CSMain (
+        in uint3 _dispatchThreadID : SV_DispatchThreadID,
+        in uint  _groupIndex       : SV_GroupIndex,
+        in uint3 _groupID          : SV_GroupID,
+        in uint3 _groupThreadID    : SV_GroupThreadID
+    )
+{
+    int tID = (int) _dispatchThreadID.x;
+    int groupTID = (int) _groupThreadID.x;
+
+    int offset = 1;
+    temp[2 * groupTID] = _GroupSumArray[2 * tID];
+    temp[2 * groupTID + 1] = _GroupSumArray[2 * tID + 1];
+    int d;
+
+    //reduction
+    for (d = _NumOfGroups >> 1; d > 0; d >>= 1)
+    {
+        GroupMemoryBarrierWithGroupSync();
+
+        if (groupTID < d)
+        {
+            int ai = offset * (2 * groupTID + 1) - 1;
+            int bi = offset * (2 * groupTID + 2) - 1;
+            temp[bi] += temp[ai];
+        }
+        offset *= 2;
+    }
+
+    if (tID == 0)
+    {
+        temp[_NumOfGroups - 1] = 0;
+    }
+    
+    //prefix sum
+    for (d = 1; d < _NumOfGroups; d *= 2)
+    {
+        offset >>= 1;
+    
+        GroupMemoryBarrierWithGroupSync();
+    
+        if (tID < d)
+        {
+            int ai = offset * (2 * groupTID + 1) - 1;
+            int bi = offset * (2 * groupTID + 2) - 1;
+            int t = temp[ai];
+            temp[ai] = temp[bi];
+            temp[bi] += t;
+        }
+    }
+
+    GroupMemoryBarrierWithGroupSync();
+    
+    _GroupSumArrayOut[2 * tID] = temp[2 * tID];
+    _GroupSumArrayOut[2 * tID + 1] = temp[2 * tID + 1];
+}

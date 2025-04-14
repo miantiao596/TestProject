@@ -1,0 +1,196 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: FaceBlend
+  m_Shader: {fileID: 4800000, guid: 87aa69d2d470f944c9e2527291445970, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords:
+  - _BLUSH
+  - _EYEBROW
+  - _EYELINER
+  - _EYESHADOW
+  - _LIP
+  - _TATTOO
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BlushMap:
+        m_Texture: {fileID: 2800000, guid: 8d2b49a3ca8e7104dbca306939046b1c, type: 3}
+        m_Scale: {x: 0.5, y: 0.5}
+        m_Offset: {x: 0.49, y: -0.1}
+    - _BlushNormalMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BlushRMASMap:
+        m_Texture: {fileID: 2800000, guid: f59ccbe5a5b61b1419fb021e8291b4f4, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BlushTintMap:
+        m_Texture: {fileID: 2800000, guid: 835b373ff2b293e4d997685641f2b15f, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EyeBrowMap:
+        m_Texture: {fileID: 2800000, guid: 062cb7f36a35ef349ac557c6bccf4cb0, type: 3}
+        m_Scale: {x: 0.22, y: 0.22}
+        m_Offset: {x: 0.29, y: -0.78}
+    - _EyeBrowNormalMap:
+        m_Texture: {fileID: 2800000, guid: 29d051eb6bc7b3e44957ae5eeb3c9b25, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EyeBrowRMASMap:
+        m_Texture: {fileID: 2800000, guid: 54a2e7833f96ef64fbcd00f3ec8ce358, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EyeBrowTintMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EyeLinerMap:
+        m_Texture: {fileID: 2800000, guid: 1136d59c107246a4bb65eb655b7c69f6, type: 3}
+        m_Scale: {x: 0.3, y: 0.3}
+        m_Offset: {x: 0.38, y: -0.56}
+    - _EyeLinerNormalMap:
+        m_Texture: {fileID: 2800000, guid: d6dcc7fc9fe471042b21b98213175b57, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EyeLinerRMASMap:
+        m_Texture: {fileID: 2800000, guid: 8df42505c47086445a45776da96c9090, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EyeLinerTintMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EyeShadowMap:
+        m_Texture: {fileID: 2800000, guid: 0f0fe548272b8b54e88272cbdaea4df0, type: 3}
+        m_Scale: {x: 0.5, y: 0.5}
+        m_Offset: {x: 0.36, y: -0.32}
+    - _EyeShadowNormalMap:
+        m_Texture: {fileID: 2800000, guid: 46b079a8773f892498079e7e2651a083, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EyeShadowRMASMap:
+        m_Texture: {fileID: 2800000, guid: dd5d43fca78154f41a2fdf65a990db64, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EyeShadowTintMap:
+        m_Texture: {fileID: 2800000, guid: d3889f903c262154d951ae222aae3290, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _FaceMap:
+        m_Texture: {fileID: 2800000, guid: 1318ca858b6f6004a86addac7108f68f, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _FaceNormalMap:
+        m_Texture: {fileID: 2800000, guid: bc03ee7db75c4da49b702bd3e9808ef6, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _FaceRMASMap:
+        m_Texture: {fileID: 2800000, guid: 1f4014ab4e5ed3245a0eb6d3c0035cf2, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _LipMap:
+        m_Texture: {fileID: 2800000, guid: 9134979199537024eaa1179b9356a141, type: 3}
+        m_Scale: {x: 0.2, y: 0.2}
+        m_Offset: {x: 0, y: 0.44}
+    - _LipNormalMap:
+        m_Texture: {fileID: 2800000, guid: bb4e2538481aa1744bb334cf0aeddaca, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _LipRMASMap:
+        m_Texture: {fileID: 2800000, guid: f8545417207114a4a8b8883522d06a8d, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _LipTintMap:
+        m_Texture: {fileID: 2800000, guid: 89986e3ee869fb54e96f2c5bb20499c0, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TattooMap:
+        m_Texture: {fileID: 2800000, guid: 1f5099372f4095a47961ddb942f49a4c, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: -0.72}
+    - _TattooNormalMap:
+        m_Texture: {fileID: 2800000, guid: 819a49a708ab34b479190ab1166cb59e, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TattooRMASMap:
+        m_Texture: {fileID: 2800000, guid: d09b5a4898779f04a8c2d51e0cc0fb38, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TattooTintMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _Blush: 1
+    - _BlushUVMirror: 1
+    - _BlushUVRotate: 0
+    - _EyeBrow: 1
+    - _EyeBrowUVMirror: 1
+    - _EyeBrowUVRotate: 0
+    - _EyeLiner: 1
+    - _EyeLinerUVMirror: 1
+    - _EyeLinerUVRotate: 0
+    - _EyeShadow: 1
+    - _EyeShadowUVMirror: 1
+    - _EyeShadowUVRotate: 0
+    - _Face: 1
+    - _Lip: 1
+    - _LipNormalScale: 1
+    - _LipSmoothness: 0.346
+    - _LipUVMirror: 0
+    - _LipUVRotate: 0
+    - _Tattoo: 1
+    - _TattooUVMirror: 0
+    - _TattooUVRotate: 0
+    m_Colors:
+    - _BlushTintColor1: {r: 1, g: 0.43710685, b: 0.43710685, a: 1}
+    - _BlushTintColor2: {r: 1, g: 1, b: 1, a: 0}
+    - _BlushTintColor3: {r: 1, g: 1, b: 1, a: 0}
+    - _EyeBrowTintColor1: {r: 1, g: 1, b: 1, a: 1}
+    - _EyeBrowTintColor2: {r: 1, g: 1, b: 1, a: 0}
+    - _EyeBrowTintColor3: {r: 1, g: 1, b: 1, a: 0}
+    - _EyeLinerTintColor1: {r: 1, g: 1, b: 1, a: 1}
+    - _EyeLinerTintColor2: {r: 1, g: 1, b: 1, a: 0}
+    - _EyeLinerTintColor3: {r: 1, g: 1, b: 1, a: 0}
+    - _EyeShadowTintColor1: {r: 0.5345911, g: 0.3401785, b: 0.29083097, a: 1}
+    - _EyeShadowTintColor2: {r: 0.40546495, g: 0.282465, b: 0.46540874, a: 0.5019608}
+    - _EyeShadowTintColor3: {r: 1, g: 1, b: 1, a: 0}
+    - _FaceColor: {r: 1, g: 1, b: 1, a: 1}
+    - _LipTintColor1: {r: 1, g: 0, b: 0.18823528, a: 1}
+    - _LipTintColor2: {r: 1, g: 1, b: 1, a: 0}
+    - _LipTintColor3: {r: 1, g: 1, b: 1, a: 0}
+    - _TattooTintColor1: {r: 1, g: 1, b: 1, a: 1}
+    - _TattooTintColor2: {r: 1, g: 1, b: 1, a: 0}
+    - _TattooTintColor3: {r: 1, g: 1, b: 1, a: 0}
+  m_BuildTextureStacks: []
+--- !u!114 &7096717998436793805
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 7

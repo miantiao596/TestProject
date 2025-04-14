@@ -1,0 +1,68 @@
+fileFormatVersion: 2
+guid: 57eedb2f6a334e24e92a436b44d8bd52
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MI_Female_Hair_0100_Equip01
+    second: {fileID: 2100000, guid: cf3136eb4b2cdff4caaf93c6204d86e9, type: 2}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 804e1ce4c496647cfa3f1a1134187c71, type: 3}
+  _removeEmptyRootObjects: 1
+  _scaleFactor: 1
+  _maximumLod: 300
+  _readWriteEnabled: 1
+  _generateColliders: 0
+  _swapUvs: 0
+  _generateLightmapUVs: 0
+  _importBlendShapeNames: 1
+  _blendShapeFrameWeight:
+    _option: 0
+    _multiplier: 1
+  _importNormals: 0
+  _importTangents: 0
+  _importCamera: 2
+  _importAnimations: 2
+  _addAnimatorComponent: 0
+  _animationLoopTime: 1
+  _animationLoopPose: 0
+  _importMaterials: 1
+  _enableGpuInstancing: 0
+  _texturesReadWriteEnabled: 1
+  _generateMipMaps: 1
+  _useSceneNameIdentifier: 1
+  _textureCompression: -50
+  optimizeGameObjects: 0
+  materials:
+  - {fileID: -3328133977705379395, guid: 57eedb2f6a334e24e92a436b44d8bd52, type: 3}
+  - {fileID: 6698977639094751007, guid: 57eedb2f6a334e24e92a436b44d8bd52, type: 3}
+  - {fileID: -1495586041444547305, guid: 57eedb2f6a334e24e92a436b44d8bd52, type: 3}
+  - {fileID: -3780777456459155526, guid: 57eedb2f6a334e24e92a436b44d8bd52, type: 3}
+  - {fileID: -250072338153285942, guid: 57eedb2f6a334e24e92a436b44d8bd52, type: 3}
+  - {fileID: 8953464674201081098, guid: 57eedb2f6a334e24e92a436b44d8bd52, type: 3}
+  - {fileID: 6038910055381526548, guid: 57eedb2f6a334e24e92a436b44d8bd52, type: 3}
+  - {fileID: -7076730208797295927, guid: 57eedb2f6a334e24e92a436b44d8bd52, type: 3}
+  - {fileID: -6868913297752167457, guid: 57eedb2f6a334e24e92a436b44d8bd52, type: 3}
+  - {fileID: 6080762953859121177, guid: 57eedb2f6a334e24e92a436b44d8bd52, type: 3}
+  - {fileID: -1472181694412433680, guid: 57eedb2f6a334e24e92a436b44d8bd52, type: 3}
+  - {fileID: 6375068923465310649, guid: 57eedb2f6a334e24e92a436b44d8bd52, type: 3}
+  - {fileID: 2910276361615957012, guid: 57eedb2f6a334e24e92a436b44d8bd52, type: 3}
+  - {fileID: -4945714545556057749, guid: 57eedb2f6a334e24e92a436b44d8bd52, type: 3}
+  - {fileID: 3386151487819584899, guid: 57eedb2f6a334e24e92a436b44d8bd52, type: 3}
+  - {fileID: 189911249238886606, guid: 57eedb2f6a334e24e92a436b44d8bd52, type: 3}
+  - {fileID: 2421526169915824858, guid: 57eedb2f6a334e24e92a436b44d8bd52, type: 3}
+  textures: []
+  hasSceneData: 1
+  hasAnimationData: 0
+  hasMaterialData: 1
+  hasTextureData: 0
+  animations: []
+  _extensions: []
+  _textures: []
+  _mainAssetIdentifier: scenes/Scene
+  _importPlugins: []

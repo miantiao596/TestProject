@@ -1,0 +1,83 @@
+fileFormatVersion: 2
+guid: a7c59c0aaa5da174e990900ccec2341a
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MI_CustomEye
+    second: {fileID: 2100000, guid: 999b63a383148534e9ac24d81f3e63c3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MI_CustomFace_NoBakedNormalTex_Female_Head01
+    second: {fileID: 2100000, guid: 40e24ed9a9f567249ad81e307b6a1b6a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MI_EyeOcclusion
+    second: {fileID: 2100000, guid: 272307599551fbe4abcc4aec7dbbba11, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MI_EyeTearDuct
+    second: {fileID: 2100000, guid: c41255e5fb91f6a4c9a94cf7a029e1d3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MI_Mouth
+    second: {fileID: 2100000, guid: b5c2d22edb7418a41968e3b3c316c3fd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MI_eyelash05
+    second: {fileID: 2100000, guid: 9f95c3dde40c7a64db3648750add642f, type: 2}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 804e1ce4c496647cfa3f1a1134187c71, type: 3}
+  _removeEmptyRootObjects: 1
+  _scaleFactor: 1
+  _maximumLod: 300
+  _readWriteEnabled: 1
+  _generateColliders: 0
+  _swapUvs: 0
+  _generateLightmapUVs: 0
+  _importBlendShapeNames: 1
+  _blendShapeFrameWeight:
+    _option: 0
+    _multiplier: 1
+  _importNormals: 0
+  _importTangents: 0
+  _importCamera: 2
+  _importAnimations: 2
+  _addAnimatorComponent: 0
+  _animationLoopTime: 1
+  _animationLoopPose: 0
+  _importMaterials: 1
+  _enableGpuInstancing: 0
+  _texturesReadWriteEnabled: 1
+  _generateMipMaps: 1
+  _useSceneNameIdentifier: 1
+  _textureCompression: -50
+  optimizeGameObjects: 0
+  materials:
+  - {fileID: 3113806833208783540, guid: a7c59c0aaa5da174e990900ccec2341a, type: 3}
+  - {fileID: 6298483888458322943, guid: a7c59c0aaa5da174e990900ccec2341a, type: 3}
+  - {fileID: -8566228024622990337, guid: a7c59c0aaa5da174e990900ccec2341a, type: 3}
+  - {fileID: -8837225903523024365, guid: a7c59c0aaa5da174e990900ccec2341a, type: 3}
+  - {fileID: -6432152426664479496, guid: a7c59c0aaa5da174e990900ccec2341a, type: 3}
+  - {fileID: 5065936374934243605, guid: a7c59c0aaa5da174e990900ccec2341a, type: 3}
+  - {fileID: -8785835977883531326, guid: a7c59c0aaa5da174e990900ccec2341a, type: 3}
+  textures: []
+  hasSceneData: 1
+  hasAnimationData: 0
+  hasMaterialData: 1
+  hasTextureData: 0
+  animations: []
+  _extensions: []
+  _textures: []
+  _mainAssetIdentifier: scenes/Scene
+  _importPlugins: []

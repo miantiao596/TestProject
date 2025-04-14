@@ -1,0 +1,90 @@
+fileFormatVersion: 2
+guid: 1266ccb439b2fe044adc98adc0e672cd
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MI_Female_Fingernail
+    second: {fileID: 2100000, guid: b6f002cd745920b40b6789fdfb03d4a2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MI_Female_Toenail
+    second: {fileID: 2100000, guid: 3289277b6d8b9b840b931db4fb02d255, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MI_Female_body
+    second: {fileID: 2100000, guid: 8268207203ad2f148a3ba0b73123ffec, type: 2}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 804e1ce4c496647cfa3f1a1134187c71, type: 3}
+  _removeEmptyRootObjects: 1
+  _scaleFactor: 1
+  _maximumLod: 300
+  _readWriteEnabled: 1
+  _generateColliders: 0
+  _swapUvs: 0
+  _generateLightmapUVs: 0
+  _importBlendShapeNames: 1
+  _blendShapeFrameWeight:
+    _option: 0
+    _multiplier: 1
+  _importNormals: 0
+  _importTangents: 0
+  _importCamera: 2
+  _importAnimations: 2
+  _addAnimatorComponent: 0
+  _animationLoopTime: 1
+  _animationLoopPose: 0
+  _importMaterials: 1
+  _enableGpuInstancing: 0
+  _texturesReadWriteEnabled: 1
+  _generateMipMaps: 1
+  _useSceneNameIdentifier: 1
+  _textureCompression: -50
+  optimizeGameObjects: 0
+  materials:
+  - {fileID: -3900521121686808485, guid: 1266ccb439b2fe044adc98adc0e672cd, type: 3}
+  - {fileID: -1764030646031159326, guid: 1266ccb439b2fe044adc98adc0e672cd, type: 3}
+  - {fileID: -6901224687207717836, guid: 1266ccb439b2fe044adc98adc0e672cd, type: 3}
+  - {fileID: -7480126370248530425, guid: 1266ccb439b2fe044adc98adc0e672cd, type: 3}
+  - {fileID: -2684835518277537375, guid: 1266ccb439b2fe044adc98adc0e672cd, type: 3}
+  - {fileID: 1682145337396340219, guid: 1266ccb439b2fe044adc98adc0e672cd, type: 3}
+  - {fileID: -4664436629351724373, guid: 1266ccb439b2fe044adc98adc0e672cd, type: 3}
+  - {fileID: -7592392084699271320, guid: 1266ccb439b2fe044adc98adc0e672cd, type: 3}
+  - {fileID: 6474633535905696760, guid: 1266ccb439b2fe044adc98adc0e672cd, type: 3}
+  - {fileID: 3910519809868138479, guid: 1266ccb439b2fe044adc98adc0e672cd, type: 3}
+  - {fileID: 7397361408918857138, guid: 1266ccb439b2fe044adc98adc0e672cd, type: 3}
+  - {fileID: -7991199476322920620, guid: 1266ccb439b2fe044adc98adc0e672cd, type: 3}
+  - {fileID: -6075305979208431109, guid: 1266ccb439b2fe044adc98adc0e672cd, type: 3}
+  - {fileID: -6222744106897419648, guid: 1266ccb439b2fe044adc98adc0e672cd, type: 3}
+  - {fileID: 6103262404712144580, guid: 1266ccb439b2fe044adc98adc0e672cd, type: 3}
+  - {fileID: -5458549771616290280, guid: 1266ccb439b2fe044adc98adc0e672cd, type: 3}
+  - {fileID: 7649238901369907631, guid: 1266ccb439b2fe044adc98adc0e672cd, type: 3}
+  - {fileID: -7042601347698861968, guid: 1266ccb439b2fe044adc98adc0e672cd, type: 3}
+  - {fileID: -1424814617030428920, guid: 1266ccb439b2fe044adc98adc0e672cd, type: 3}
+  - {fileID: -7881367159765526212, guid: 1266ccb439b2fe044adc98adc0e672cd, type: 3}
+  - {fileID: 6101156087413826551, guid: 1266ccb439b2fe044adc98adc0e672cd, type: 3}
+  - {fileID: -3139736087466201994, guid: 1266ccb439b2fe044adc98adc0e672cd, type: 3}
+  - {fileID: 5392606582708291691, guid: 1266ccb439b2fe044adc98adc0e672cd, type: 3}
+  - {fileID: 5517247684827761165, guid: 1266ccb439b2fe044adc98adc0e672cd, type: 3}
+  - {fileID: 5686630560275562561, guid: 1266ccb439b2fe044adc98adc0e672cd, type: 3}
+  - {fileID: 5521180936341947402, guid: 1266ccb439b2fe044adc98adc0e672cd, type: 3}
+  - {fileID: 1910729084572241297, guid: 1266ccb439b2fe044adc98adc0e672cd, type: 3}
+  - {fileID: 5933824403995468972, guid: 1266ccb439b2fe044adc98adc0e672cd, type: 3}
+  - {fileID: 1620726870078388560, guid: 1266ccb439b2fe044adc98adc0e672cd, type: 3}
+  textures: []
+  hasSceneData: 1
+  hasAnimationData: 0
+  hasMaterialData: 1
+  hasTextureData: 0
+  animations: []
+  _extensions: []
+  _textures: []
+  _mainAssetIdentifier: scenes/Scene
+  _importPlugins: []

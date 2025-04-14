@@ -1,0 +1,20 @@
+fileFormatVersion: 2
+guid: 7d16d692121840848850f81b07cbdf67
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures:
+  - _IridescenceMatCap: {instanceID: 0}
+  - _ReflectionProbeMap: {fileID: 8900000, guid: 3799a2662b8463c4e9121459032832c2,
+      type: 3}
+  - _MainTex: {instanceID: 0}
+  - _CombinedAO: {fileID: 2800000, guid: 0bbfb2c75b33c2448a9287a1f7ba1683, type: 3}
+  - _BumpMap: {instanceID: 0}
+  - _HexPattern: {instanceID: 0}
+  - _DissolveMask: {fileID: 2800000, guid: 2b28cd8875c76184694f23cfe6e2d53a, type: 3}
+  - _RampMask: {instanceID: 0}
+  - _Hologram2_Line1: {instanceID: 0}
+  - _Hologram2_LineGlitch: {instanceID: 0}
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

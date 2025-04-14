@@ -1,0 +1,158 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-418753899011654592
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf51054695187114a9c2152716a10b6e, type: 3}
+  m_Name: EnvironmentVolume
+  m_EditorClassIdentifier: 
+  active: 1
+  useSSAO:
+    m_OverrideState: 1
+    m_Value: 1
+  AOMethod:
+    m_OverrideState: 1
+    m_Value: 1
+  DownSample:
+    m_OverrideState: 1
+    m_Value: 1
+  AfterOpaque:
+    m_OverrideState: 1
+    m_Value: 0
+  Source:
+    m_OverrideState: 1
+    m_Value: 1
+  NormalSamples:
+    m_OverrideState: 1
+    m_Value: 2
+  Intensity:
+    m_OverrideState: 1
+    m_Value: 2.09
+  DirectLightingStrength:
+    m_OverrideState: 1
+    m_Value: 0.164
+  Radius:
+    m_OverrideState: 1
+    m_Value: 0.25
+  Samples:
+    m_OverrideState: 1
+    m_Value: 1
+  BlurQuality:
+    m_OverrideState: 1
+    m_Value: 0
+  FallOff:
+    m_OverrideState: 1
+    m_Value: 100
+  useFog:
+    m_OverrideState: 0
+    m_Value: 0
+  fogDensity:
+    m_OverrideState: 1
+    m_Value: 0.109
+  fogDensityMax:
+    m_OverrideState: 0
+    m_Value: 1
+  fogOpacityTop:
+    m_OverrideState: 0
+    m_Value: 0.5
+  fogOpacityBottom:
+    m_OverrideState: 0
+    m_Value: 0.5
+  fogHeight:
+    m_OverrideState: 1
+    m_Value: 20
+  heightFallOff:
+    m_OverrideState: 1
+    m_Value: -0.05
+  fogTopColor:
+    m_OverrideState: 1
+    m_Value: {r: 1, g: 0.01923077, b: 0, a: 1}
+  fogBottomColor:
+    m_OverrideState: 1
+    m_Value: {r: 0.5405442, g: 0.9453752, b: 0.9496855, a: 1}
+  gradientTop:
+    m_OverrideState: 1
+    m_Value: 56.1
+  gradientBottom:
+    m_OverrideState: 1
+    m_Value: 24.8
+  fogStart:
+    m_OverrideState: 1
+    m_Value: 17
+  useEnviromentLighting:
+    m_OverrideState: 0
+    m_Value: 0
+  useSkyBoxMaterial:
+    m_OverrideState: 1
+    m_Value: 0
+  skyBoxMaterial:
+    m_OverrideState: 1
+    m_Value: {fileID: 0}
+  useSunSource:
+    m_OverrideState: 1
+    m_Value: 0
+  sunSource:
+    m_OverrideState: 1
+    m_Value: {fileID: 0}
+  useEnvironmentLight:
+    m_OverrideState: 1
+    m_Value: 0
+  source:
+    m_OverrideState: 1
+    m_Value: 3
+  intensityMultiplier:
+    m_OverrideState: 1
+    m_Value: 4
+  skyColor:
+    m_OverrideState: 1
+    m_Value: {r: 1, g: 1, b: 1, a: 1}
+  equatorColor:
+    m_OverrideState: 1
+    m_Value: {r: 1, g: 1, b: 1, a: 1}
+  groundColor:
+    m_OverrideState: 1
+    m_Value: {r: 1, g: 1, b: 1, a: 1}
+  ambientColor:
+    m_OverrideState: 1
+    m_Value: {r: 1, g: 1, b: 1, a: 1}
+  useReflections:
+    m_OverrideState: 1
+    m_Value: 0
+  reflectionSource:
+    m_OverrideState: 1
+    m_Value: 0
+  resolution:
+    m_OverrideState: 1
+    m_Value: 16
+  reflectIntensityMultiplier:
+    m_OverrideState: 1
+    m_Value: 0.5
+  bounces:
+    m_OverrideState: 1
+    m_Value: 0
+  cubemap:
+    m_OverrideState: 1
+    m_Value: {fileID: 0}
+  characterAmbientColor:
+    m_OverrideState: 0
+    m_Value: {r: 0.5647059, g: 0.5647059, b: 0.5647059, a: 1}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7fd9488000d3734a9e00ee676215985, type: 3}
+  m_Name: Custom SSAO
+  m_EditorClassIdentifier: 
+  components:
+  - {fileID: -418753899011654592}

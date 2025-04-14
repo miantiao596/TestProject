@@ -1,0 +1,206 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: New Material
+  m_Shader: {fileID: 4800000, guid: c7e4681d5f814634dbfe3bc4326113b5, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords:
+  - _BASEMAPLAYER1
+  - _BASEMAPLAYER3
+  - _DOUBLESIDED
+  - _GRADUALCOLOR
+  - _NORMALMAP
+  - _NORMALMAPLAYER1
+  - _NORMALMAPLAYER3
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BaseMap:
+        m_Texture: {fileID: 2800000, guid: d8d7945b4c25d3945bc1984e376b429b, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BaseMapLayer1:
+        m_Texture: {fileID: 2800000, guid: 42a285e2e139d8547832ebee2757d890, type: 3}
+        m_Scale: {x: 40, y: 40}
+        m_Offset: {x: 0, y: 0}
+    - _BaseMapLayer2:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BaseMapLayer3:
+        m_Texture: {fileID: 2800000, guid: 76db113473b041f459649e1328b9a7d4, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BumpMap:
+        m_Texture: {fileID: 2800000, guid: 86ee19a859b3a6e4ba32c655482a08fe, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BumpMapLayer1:
+        m_Texture: {fileID: 2800000, guid: d52436bb6c88a594dbe61ef368312513, type: 3}
+        m_Scale: {x: 200, y: 200}
+        m_Offset: {x: 0, y: 0}
+    - _BumpMapLayer2:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BumpMapLayer3:
+        m_Texture: {fileID: 2800000, guid: ed5c7e3f7402ea14193caadc99f5c601, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailAlbedoMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailNormalMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _FuzzMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MetallicGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OcclusionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ParallaxMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SpecGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ThreadMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _AdvancedOptionsGroup: 0
+    - _AlphaControlMax: 1
+    - _AlphaControlMin: 0
+    - _AlphaTest: 0
+    - _Anisotropy: 0
+    - _BaseMapLayer1Key: 1
+    - _BaseMapLayer2Key: 0
+    - _BaseMapLayer3Key: 1
+    - _BumpAlphaBlendLayer1: 0
+    - _BumpAlphaBlendLayer2: 0
+    - _BumpAlphaBlendLayer3: 1
+    - _BumpMapLayer1Key: 1
+    - _BumpMapLayer2Key: 0
+    - _BumpMapLayer3Key: 1
+    - _BumpScale: 1
+    - _BumpScaleLayer1: 0.5
+    - _BumpScaleLayer2: 1
+    - _BumpScaleLayer3: 1
+    - _ClearCoatMask: 0
+    - _ClearCoatSmoothness: 0
+    - _ColorMask: 15
+    - _Cull: 0
+    - _Cutoff: 0.5
+    - _DetailAlbedoMapScale: 1
+    - _DetailKey: 0
+    - _DetailNormalMapScale: 1
+    - _DstBlend: 0
+    - _EmissionMapKey: 0
+    - _EnableDoubleSided: 1
+    - _EnableTranslucency: 0
+    - _EnvironmentReflections: 1
+    - _FabricInputsGroup: 0
+    - _FabricType: 0
+    - _FuzzIntensity: 0
+    - _FuzzMapKey: 0
+    - _FuzzScale: 1
+    - _GradualEnd: 1
+    - _GradualRamp: 1
+    - _GradualStart: 0
+    - _LayerMapGroup: 0
+    - _Metallic: 0
+    - _MetallicGlossMapKey: 0
+    - _MetallicLayer1: 0
+    - _MetallicLayer2: 0
+    - _MetallicLayer3: 0.095
+    - _NormalMapKey: 1
+    - _OcclusionMapKey: 0
+    - _OcclusionStrength: 1
+    - _Parallax: 0.005
+    - _ParallaxMapKey: 0
+    - _ReceiveShadows: 1
+    - _Sequin: 0
+    - _SequinBrightness: 10
+    - _SequinDensity: 50
+    - _SequinRandomSeed: 1
+    - _SequinScaleMax: 0.5
+    - _SequinScaleMin: 0
+    - _Smoothness: 0
+    - _SmoothnessLayer1: 0.06
+    - _SmoothnessLayer2: 0.5
+    - _SmoothnessLayer3: 0.113
+    - _SmoothnessTextureChannel: 0
+    - _SpecularHighlights: 1
+    - _SrcBlend: 1
+    - _Surface: 0
+    - _SurfaceInputsGroup: 0
+    - _SurfaceOptionsGroup: 0
+    - _ThreadAOScale: 1
+    - _ThreadMapKey: 0
+    - _ThreadNormalScale: 1
+    - _ThreadSmoothnessScale: 1
+    - _WorkflowMode: 1
+    - _ZTest: 4
+    - _ZWrite: 1
+    m_Colors:
+    - _BaseColoLayer1: {r: 1, g: 1, b: 1, a: 0.6117647}
+    - _BaseColoLayer2: {r: 1, g: 1, b: 1, a: 1}
+    - _BaseColoLayer3: {r: 1, g: 1, b: 1, a: 1}
+    - _BaseColor: {r: 0.56289303, g: 0.97139937, b: 1, a: 1}
+    - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _GradualColor: {r: 0.9490196, g: 0.6219474, b: 0.31372553, a: 0}
+    - _SequinColor0: {r: 1, g: 1, b: 1, a: 1}
+    - _SequinColor1: {r: 1, g: 0, b: 0, a: 1}
+    - _SequinColor2: {r: 0, g: 1, b: 0, a: 1}
+    - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
+  m_BuildTextureStacks: []
+--- !u!114 &3041531705771303032
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 7

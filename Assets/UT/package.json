@@ -1,0 +1,29 @@
+{
+  "name": "com.ut.rendering",
+  "description": "Meta48 Unity Rendering Package",
+  "version": "0.1.7",
+  "unity": "2022.3",
+  "displayName": "UT-Rendering",
+  "dependencies": {
+    "com.unity.nuget.newtonsoft-json": "2.0.0",
+    "com.unity.render-pipelines.universal": "14.0.10004"
+  },
+  "samples": [
+    {
+      "displayName": "Rendering Package Demo Sample",
+      "description": "Demo scene showcasing different features of the UT Rendering.",
+      "path": "Samples~/Rendering Package Demo Sample"
+    },
+    {
+      "displayName": "EnvironmentAllInOneFeature Demo",
+      "description": "Demo scene showcasing new volume of the UT Rendering.",
+      "path": "Samples~/EnvironmentAllInOneFeature Demo"
+    },
+    {
+      "displayName": "Character LookDev",
+      "description": "Lookdev scene for checking character under UT Rendering.",
+      "path": "Samples~/Character LookDev"
+    }
+  ],
+  "author": "Meta48"
+}

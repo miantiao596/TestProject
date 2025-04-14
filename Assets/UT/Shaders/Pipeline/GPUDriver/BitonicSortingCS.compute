@@ -1,0 +1,76 @@
+#include "IndirectStructs.hlsl"
+
+#pragma kernel BitonicSort
+#pragma kernel MatrixTranspose
+// #pragma enable_d3d11_debug_symbols
+
+#define BITONIC_BLOCK_SIZE 256
+#define TRANSPOSE_BLOCK_SIZE 8
+
+cbuffer CB
+{
+    uint _Level;
+    uint _LevelMask;
+    uint _MatrixWidth;
+    uint _MatrixHeight;
+}
+
+StructuredBuffer<SortingData> _Input;
+RWStructuredBuffer<SortingData> _Data;
+
+groupshared SortingData _SharedData[BITONIC_BLOCK_SIZE];
+[numthreads(BITONIC_BLOCK_SIZE, 1, 1)]
+void BitonicSort (
+        uint3 _dispatchThreadID : SV_DispatchThreadID,
+        uint  _groupIndex       : SV_GroupIndex,
+        uint3 _groupID          : SV_GroupID,
+        uint3 _groupThreadID    : SV_GroupThreadID
+    )
+{
+    uint tID = _dispatchThreadID.x;
+    uint GI = _groupIndex;
+    _SharedData[GI] = _Data[tID];
+    GroupMemoryBarrierWithGroupSync();
+
+    for (uint j = _Level >> 1; j > 0; j >>= 1)
+    {
+        SortingData result = _SharedData[GI];
+        uint t1 = GI & ~j;
+        uint t2 = GI | j;
+        SortingData inst1 = _SharedData[t1];//较小值
+        SortingData inst2 = _SharedData[t2];//较大值
+        
+        float dist1 = (inst1.drawCallInstanceIndex >> 16) * 5000 + inst1.distanceToCam;
+        float dist2 = (inst2.drawCallInstanceIndex >> 16) * 5000 + inst2.distanceToCam;
+
+        if ((dist1 <= dist2) == ((bool)(_LevelMask & tID)))//满足升序列小于，降序列大于
+        {
+            result = _SharedData[GI ^ j];//互换数值
+        }
+        GroupMemoryBarrierWithGroupSync();
+
+        _SharedData[GI] = result;
+        GroupMemoryBarrierWithGroupSync();
+
+        _Data[tID] = _SharedData[GI];
+    }
+}
+
+groupshared SortingData _SharedTransposeData[TRANSPOSE_BLOCK_SIZE * TRANSPOSE_BLOCK_SIZE];
+[numthreads(TRANSPOSE_BLOCK_SIZE, TRANSPOSE_BLOCK_SIZE, 1)]
+void MatrixTranspose(
+        in uint3 _dispatchThreadID : SV_DispatchThreadID,
+        in uint  _groupIndex       : SV_GroupIndex,
+        in uint3 _groupID          : SV_GroupID,
+        in uint3 _groupThreadID    : SV_GroupThreadID
+    )
+{
+    uint3 tID = _dispatchThreadID;
+    uint3 GTID = _groupThreadID;
+    uint GI = _groupIndex;
+    _SharedTransposeData[GI] = _Input[tID.y * _MatrixWidth + tID.x];
+    GroupMemoryBarrierWithGroupSync();
+
+    uint2 XY = tID.yx - GTID.yx + GTID.xy;
+    _Data[XY.y * _MatrixHeight + XY.x] = _SharedTransposeData[GTID.x * TRANSPOSE_BLOCK_SIZE + GTID.y];
+}

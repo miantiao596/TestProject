@@ -1,0 +1,192 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-5216299087462538864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aee47334d169279419da8749ecb4acc0, type: 3}
+  m_Name: CharacterAllInOneFeature
+  m_EditorClassIdentifier: 
+  m_Active: 1
+  settings:
+    selfShadowSettings:
+      sceneObjShadowLod: 1
+      charaShadowLod: 1
+      mainSelfShadowQuality: 2048
+      additionalSelfShadowQuality: 2048
+      layer:
+        serializedVersion: 2
+        m_Bits: 0
+      depthBias: 0.01
+      shadowNormalBiasMultiplier: 0
+      raiseShadowmapResolution: 0
+      perfectCullingForShadowCasters: 0
+      switchToURPShadow_CharaOnly: 0
+--- !u!114 &-4749640776184632057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 984a587f24097a148807a0ccf7000893, type: 3}
+  m_Name: CustomRenderFeature
+  m_EditorClassIdentifier: 
+  m_Active: 1
+  m_customDrawLightModeTags:
+  - SceneEffect
+  - Character
+  - Scene
+  m_customDrawLayerMask:
+    serializedVersion: 2
+    m_Bits: 64407
+  m_renderType: 1
+--- !u!114 &-4218827267373174748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 940714d87b5a51f41a5215a913c05ba2, type: 3}
+  m_Name: UI3DFeature
+  m_EditorClassIdentifier: 
+  m_Active: 1
+--- !u!114 &-455103333884484754
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 816b332c316035841b4aabb3b7f58ea4, type: 3}
+  m_Name: DistortionPassFeature
+  m_EditorClassIdentifier: 
+  m_Active: 1
+  m_event: 500
+  m_eventOffset: 40
+  m_renderQueue: 1
+  m_filters:
+    LayerMask:
+      serializedVersion: 2
+      m_Bits: 4294967295
+    LightModeTags:
+    - Distortion
+    - Distortion2
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de640fe3d0db1804a85f9fc8f5cadab6, type: 3}
+  m_Name: SceneRenderer
+  m_EditorClassIdentifier: 
+  debugShaders:
+    debugReplacementPS: {fileID: 4800000, guid: cf852408f2e174538bcd9b7fda1c5ae7,
+      type: 3}
+    hdrDebugViewPS: {fileID: 4800000, guid: 573620ae32aec764abd4d728906d2587, type: 3}
+  m_RendererFeatures:
+  - {fileID: -455103333884484754}
+  - {fileID: 69845974508393696}
+  - {fileID: -4218827267373174748}
+  - {fileID: -4749640776184632057}
+  - {fileID: 6469595321241680235}
+  - {fileID: -5216299087462538864}
+  m_RendererFeatureMap: 6e23b8d7ed25aff9e05490338b24f80024707ddff3b673c507edcdf4e0e215be6bb923d3aa9ec85990e199f99dfb9bb7
+  m_UseNativeRenderPass: 0
+  postProcessData: {fileID: 11400000, guid: 41439944d30ece34e96484bdb6645b55, type: 2}
+  xrSystemData: {fileID: 11400000, guid: 60e1133243b97e347b653163a8c01b64, type: 2}
+  shaders:
+    blitPS: {fileID: 4800000, guid: c17132b1f77d20942aa75f8429c0f8bc, type: 3}
+    copyDepthPS: {fileID: 4800000, guid: d6dae50ee9e1bfa4db75f19f99355220, type: 3}
+    screenSpaceShadowPS: {fileID: 0}
+    samplingPS: {fileID: 4800000, guid: 04c410c9937594faa893a11dceb85f7e, type: 3}
+    stencilDeferredPS: {fileID: 4800000, guid: e9155b26e1bc55942a41e518703fe304, type: 3}
+    fallbackErrorPS: {fileID: 4800000, guid: e6e9a19c3678ded42a3bc431ebef7dbd, type: 3}
+    fallbackLoadingPS: {fileID: 4800000, guid: 7f888aff2ac86494babad1c2c5daeee2, type: 3}
+    materialErrorPS: {fileID: 4800000, guid: 5fd9a8feb75a4b5894c241777f519d4e, type: 3}
+    coreBlitPS: {fileID: 4800000, guid: 93446b5c5339d4f00b85c159e1159b7c, type: 3}
+    coreBlitColorAndDepthPS: {fileID: 4800000, guid: d104b2fc1ca6445babb8e90b0758136b,
+      type: 3}
+    blitHDROverlay: {fileID: 4800000, guid: a89bee29cffa951418fc1e2da94d1959, type: 3}
+    cameraMotionVector: {fileID: 4800000, guid: c56b7e0d4c7cb484e959caeeedae9bbf,
+      type: 3}
+    objectMotionVector: {fileID: 4800000, guid: 7b3ede40266cd49a395def176e1bc486,
+      type: 3}
+    dataDrivenLensFlare: {fileID: 4800000, guid: 6cda457ac28612740adb23da5d39ea92,
+      type: 3}
+  m_AssetVersion: 2
+  m_OpaqueLayerMask:
+    serializedVersion: 2
+    m_Bits: 326615
+  m_TransparentLayerMask:
+    serializedVersion: 2
+    m_Bits: 326615
+  m_DefaultStencilState:
+    overrideStencilState: 0
+    stencilReference: 0
+    stencilCompareFunction: 8
+    passOperation: 2
+    failOperation: 0
+    zFailOperation: 0
+  m_ShadowTransparentReceive: 1
+  m_RenderingMode: 0
+  m_DepthPrimingMode: 0
+  m_CopyDepthMode: 1
+  m_AccurateGbufferNormals: 0
+  m_IntermediateTextureMode: 1
+--- !u!114 &69845974508393696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01494ec330391bd46afbe96b4ca535b9, type: 3}
+  m_Name: UIFeature
+  m_EditorClassIdentifier: 
+  m_Active: 1
+  m_CameraType: 2
+--- !u!114 &6469595321241680235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62cf1a9e6ec8a7941afeb6a84d6c2562, type: 3}
+  m_Name: EvironmentAllInOneFeature
+  m_EditorClassIdentifier: 
+  m_Active: 1
+  settings:
+    ssaoSettings:
+      m_BlueNoise256Textures:
+      - {fileID: 2800000, guid: 58566cfbc2f2f484983ba9c273bf48e6, type: 3}
+      - {fileID: 2800000, guid: 8ef49c86ddf72eb46b6d8ef52d8dfd7a, type: 3}
+      - {fileID: 2800000, guid: 526364aa5a84e2a4698ff6e830f25a93, type: 3}
+      - {fileID: 2800000, guid: f05538bcb94a42d45985d2b042f631ce, type: 3}
+      - {fileID: 2800000, guid: 3fc79b71cea57f04bacdd85c397056c8, type: 3}
+      - {fileID: 2800000, guid: 35bc1b079a8233c43aa37332b9ef3f25, type: 3}
+      - {fileID: 2800000, guid: 7f1fa4bfcd9f99c48a47d68eb9cf24aa, type: 3}
+      - {fileID: 2800000, guid: eb329095a11047d4ca5a2878b72b6fef, type: 3}
+    fogPass:
+      usePixelFog: 1

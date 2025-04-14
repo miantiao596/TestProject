@@ -1,0 +1,242 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: MI_Female_Skirts_0122_Equip10
+  m_Shader: {fileID: 4800000, guid: c7e4681d5f814634dbfe3bc4326113b5, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords:
+  - _ALPHATEST_ON
+  - _FABRIC_COTTON
+  - _FUR
+  - _GEOM_INSTANCING
+  - _MATERIAL_FABRIC
+  - _NORMALMAP
+  - _OCCLUSIONMAP
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: 3001
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BaseMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 4, y: 4}
+        m_Offset: {x: 0, y: 0}
+    - _BaseMapLayer1:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BaseMapLayer2:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BaseMapLayer3:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BumpMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BumpMapLayer1:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BumpMapLayer2:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BumpMapLayer3:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailAlbedoMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailNormalMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _FurPatternMap:
+        m_Texture: {fileID: 2800000, guid: 816c4ab6ab42df04fa78abe3516b30d8, type: 3}
+        m_Scale: {x: 3, y: 3}
+        m_Offset: {x: 0, y: 0}
+    - _FuzzMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MatCapMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MetallicGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OcclusionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ParallaxMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SpecCubeMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SpecGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ThreadMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _AdvancedOptionsGroup: 0
+    - _AlphaControlMax: 1
+    - _AlphaControlMin: 0.9
+    - _AlphaTest: 1
+    - _Anisotropy: 0
+    - _BaseMapLayer1Key: 0
+    - _BaseMapLayer2Key: 0
+    - _BaseMapLayer3Key: 0
+    - _BentType: 1
+    - _BillBoardScale: 1
+    - _BumpAlphaBlendLayer1: 0
+    - _BumpAlphaBlendLayer2: 0
+    - _BumpAlphaBlendLayer3: 0
+    - _BumpMapLayer1Key: 0
+    - _BumpMapLayer2Key: 0
+    - _BumpMapLayer3Key: 0
+    - _BumpScale: 1
+    - _BumpScaleLayer1: 1
+    - _BumpScaleLayer2: 1
+    - _BumpScaleLayer3: 1
+    - _ClearCoatMask: 1
+    - _ClearCoatSmoothness: 0.5
+    - _ColorMask: 15
+    - _Cull: 0
+    - _CustomSHKey: 0
+    - _CustomSpecCubeMapKey: 0
+    - _Cutoff: 0.27
+    - _DetailAlbedoMapScale: 1
+    - _DetailKey: 0
+    - _DetailNormalMapScale: 1
+    - _DstBlend: 10
+    - _EmissionMapKey: 0
+    - _EnableBillBoard: 0
+    - _EnableClearCoat: 0
+    - _EnableDoubleSided: 0
+    - _EnableIridescence: 0
+    - _EnableMaterialCapture: 0
+    - _EnableSequinDebug: 0
+    - _EnableTranslucency: 0
+    - _EnvironmentReflections: 1
+    - _FabricBaseExplain: 1
+    - _FabricInputsGroup: 1
+    - _FabricType: 1
+    - _FurKey: 1
+    - _FurLength: 0.7
+    - _FurPatternMapControlMax: 1
+    - _FurPatternMapControlMin: 0.187
+    - _FuzzIntensity: 0
+    - _FuzzMapKey: 0
+    - _FuzzScale: 1
+    - _GeomInstancing: 1
+    - _GradualEnd: 1
+    - _GradualRamp: 0
+    - _GradualStart: 0
+    - _IridescenceIntensity: 0.1
+    - _IridescenceThickness: 0.85
+    - _LayerMapGroup: 0
+    - _Metallic: 0
+    - _MetallicGlossMapKey: 0
+    - _MetallicLayer1: 0
+    - _MetallicLayer2: 0
+    - _MetallicLayer3: 0
+    - _NormalMapKey: 1
+    - _ObsoletePropertiesGroup: 0
+    - _OcclusionMapKey: 1
+    - _OcclusionStrength: 1
+    - _Parallax: 0.005
+    - _ParallaxMapKey: 0
+    - _ReceiveShadows: 1
+    - _Sequin: 0
+    - _SequinBrightness: 1
+    - _SequinDensity: 50
+    - _SequinRandomSeed: 1
+    - _SequinScaleMax: 0.5
+    - _SequinScaleMin: 0.4
+    - _ShellAmount: 52
+    - _Smoothness: 0
+    - _SmoothnessLayer1: 0.5
+    - _SmoothnessLayer2: 0.5
+    - _SmoothnessLayer3: 0.5
+    - _SmoothnessTextureChannel: 0
+    - _SpecCubeMapIntensity: 1
+    - _SpecularHighlights: 1
+    - _SrcBlend: 5
+    - _Surface: 1
+    - _SurfaceInputsGroup: 0
+    - _SurfaceOptionsGroup: 0
+    - _ThreadAOScale: 1
+    - _ThreadMapKey: 0
+    - _ThreadNormalScale: 1
+    - _ThreadSmoothnessScale: 1
+    - _TotalShellStep: 0.06
+    - _TransparentZWrite: 0
+    - _UseMapAlphaLayer1: 0
+    - _UseMapAlphaLayer2: 0
+    - _UseMapAlphaLayer3: 0
+    - _WorkflowMode: 1
+    - _ZTest: 4
+    - _ZWrite: 1
+    m_Colors:
+    - _BaseColoLayer1: {r: 1, g: 1, b: 1, a: 1}
+    - _BaseColoLayer2: {r: 1, g: 1, b: 1, a: 1}
+    - _BaseColoLayer3: {r: 1, g: 1, b: 1, a: 1}
+    - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
+    - _BaseMove: {r: 0, g: 0, b: 0.7, a: 3}
+    - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _FabricSpecColor: {r: 1, g: 1, b: 1, a: 1}
+    - _GradualColor: {r: 0, g: 0, b: 0, a: 0}
+    - _SHAb: {r: 0, g: 0, b: 0, a: 0}
+    - _SHAg: {r: 0, g: 0, b: 0, a: 0}
+    - _SHAr: {r: 0, g: 0, b: 0, a: 0}
+    - _SHBb: {r: 0, g: 0, b: 0, a: 0}
+    - _SHBg: {r: 0, g: 0, b: 0, a: 0}
+    - _SHBr: {r: 0, g: 0, b: 0, a: 0}
+    - _SHC: {r: 0, g: 0, b: 0, a: 1}
+    - _SequinColor0: {r: 1, g: 1, b: 0, a: 1}
+    - _SequinColor1: {r: 0, g: 1, b: 1, a: 1}
+    - _SequinColor2: {r: 1, g: 0, b: 1, a: 1}
+    - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
+    - _UVLayer1: {r: 0, g: 1, b: 0, a: 0}
+    - _UVLayer2: {r: 0, g: 1, b: 0, a: 0}
+    - _UVLayer3: {r: 0, g: 0, b: 1, a: 0}
+  m_BuildTextureStacks: []

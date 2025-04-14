@@ -1,0 +1,176 @@
+#include "IndirectStructs.hlsl"
+
+#pragma kernel CSMain
+// #pragma enable_d3d11_debug_symbols
+
+#define THREAD_GROUP_SIZE_X 64
+#define THREAD_GROUP_SIZE_Y 1
+#define THREAD_GROUP_SIZE_Z 1
+
+#define VEGDATA_NUM 3
+
+cbuffer CB
+{
+    uint _FrustumCull_On;
+    uint _LodCull_On;
+    float3 _CamPosition;
+    float _CamFieldOfView;
+    float4x4 _UNITY_MATRIX_V;
+    float4x4 _UNITY_MATRIX_P;
+
+    float _ShadowDistance;
+}
+
+StructuredBuffer<float4x4> _LocalToWorldMatrixsBuffer;
+StructuredBuffer<InstanceData> _InstanceBoundsDataBuffer;
+StructuredBuffer<LodViewRatio> _LodViewRatioBuffer;
+StructuredBuffer<uint> _InstanceCastShadowBuffer;
+
+RWStructuredBuffer<SortingData> _SortingData;
+RWStructuredBuffer<uint> _ArgsBuffer;
+RWStructuredBuffer<uint> _IsVisibleBuffer;
+
+RWStructuredBuffer<uint> _ShadowArgsBuffer;
+RWStructuredBuffer<uint> _ShadowIsVisibleBuffer;
+
+inline uint IsCameraOutsideObjBounds(float3 pos, float3 minPos, float3 maxPos)
+{
+    float boundsSize = distance(maxPos, minPos);
+    return ((distance(pos, maxPos) > boundsSize)
+            + (distance(pos, minPos) > boundsSize));
+}
+
+inline uint IsVisibleAfterFrustumCulling(float4 clipPos)
+{
+    return (clipPos.z > clipPos.w 
+            || clipPos.x < -clipPos.w 
+            || clipPos.x > clipPos.w 
+            || clipPos.y < -clipPos.w 
+            || clipPos.y > clipPos.w) 
+            ? 0 : 1;
+}
+
+inline uint IsVisibalAfterLodCulling(float minDisToCamera, float lodRange)
+{
+    return minDisToCamera < lodRange;
+}
+/*
+float DecodeFloatRGBA(float4 rgba) 
+{
+    uint value = (uint(rgba.r * 255.0) << 0) |
+        (uint(rgba.g * 255.0) << 8) |
+        (uint(rgba.b * 255.0) << 16) |
+        (uint(rgba.a * 255.0) << 24);
+    return asfloat(value);
+}
+
+float4 EncodeIntRGBA(uint i)
+{
+    float4 color = float4(
+        ((i >> 0) & 0xFF) / 255.0f,
+        ((i >> 8) & 0xFF) / 255.0f,
+        ((i >> 16) & 0xFF) / 255.0f,
+        ((i >> 24) & 0xFF) / 255.0f
+        );
+    return color;
+}
+*/
+
+float4 DecodeFloatRGBAFloat(float4 rgba)
+{
+    uint4 value = uint4(rgba * 4294967295.0);
+    return asfloat(value);
+}
+
+float EncodeIntRGBAFloat(uint i)
+{
+    float val = float((i & 0xFFFFFFFF) / 4294967295.0);
+    return val;
+}
+
+[numthreads(THREAD_GROUP_SIZE_X,THREAD_GROUP_SIZE_Y,THREAD_GROUP_SIZE_Z)]
+void CSMain (uint3 _dispatchThreadID : SV_DispatchThreadID)
+{
+    uint tID = _dispatchThreadID.x;
+    SortingData sortingData = _SortingData[tID];
+    uint drawCall = (sortingData.drawCallInstanceIndex >> 16);
+    uint index = (sortingData.drawCallInstanceIndex) & 0xFFFF;
+    uint dcID = uint(drawCall / 15);
+
+    _IsVisibleBuffer[tID] = 0;
+    _ShadowIsVisibleBuffer[tID] = 0;
+
+    float4x4 _UNITY_MATRIX_M = _LocalToWorldMatrixsBuffer[index];
+
+    LodViewRatio lodsViewRatio = _LodViewRatioBuffer[dcID];
+    InstanceData instance = _InstanceBoundsDataBuffer[dcID];
+    uint isCastShadow = _InstanceCastShadowBuffer[dcID];
+    
+    float3 boundMin = instance.boundsCenter - instance.boundsExtents;
+    float3 boundMax = instance.boundsCenter + instance.boundsExtents;
+
+    float4 boundVerts[8];
+    boundVerts[0] =float4(boundMin.x, boundMin.y, boundMin.z, 1);
+    boundVerts[1] =float4(boundMax.x, boundMax.y, boundMax.z, 1);
+    boundVerts[2] =float4(boundMax.x, boundMax.y, boundMin.z, 1);
+    boundVerts[3] =float4(boundMax.x, boundMin.y, boundMax.z, 1);
+    boundVerts[4] =float4(boundMax.x, boundMin.y, boundMin.z, 1);
+    boundVerts[5] =float4(boundMin.x, boundMax.y, boundMax.z, 1);
+    boundVerts[6] =float4(boundMin.x, boundMax.y, boundMin.z, 1);
+    boundVerts[7] =float4(boundMin.x, boundMin.y, boundMax.z, 1);
+
+    float4x4 _UNITY_MATRIX_VP = mul(_UNITY_MATRIX_P, _UNITY_MATRIX_V);
+
+    float4 worldPos =  mul(_UNITY_MATRIX_M, boundVerts[0]);
+    float4 clipPos =  mul(_UNITY_MATRIX_VP, worldPos);
+    uint isInFrustum = IsVisibleAfterFrustumCulling(clipPos);
+
+    float minDistanceToCamera = distance((float3)worldPos, _CamPosition.xyz);
+    float3 boundMin2 = (float3)worldPos;
+    float3 boundMax2 = (float3)worldPos;
+    [unroll]
+    for (int i = 1; i < 8; i++)
+    {
+        worldPos =  mul(_UNITY_MATRIX_M, boundVerts[i]);
+        clipPos = mul(_UNITY_MATRIX_VP, worldPos);
+        isInFrustum = saturate(isInFrustum + IsVisibleAfterFrustumCulling(clipPos));
+
+        // For LODing
+        minDistanceToCamera = min(distance((float3)worldPos, _CamPosition.xyz), minDistanceToCamera);
+        boundMin2 = min((float3)worldPos, boundMin2);
+        boundMax2 = max((float3)worldPos, boundMax2);
+    }
+
+    //LOD
+    float3 boundSize2 = boundMax2 - boundMin2;
+    float maxSize = max(max(boundSize2.x, boundSize2.y), boundSize2.z);
+    float camAngle = radians(_CamFieldOfView * 0.5);
+    float camRatio = maxSize * 0.5 / tan(camAngle);
+    
+    float lod0Range = camRatio / lodsViewRatio.lod0Range;
+    float lod1Range = camRatio / lodsViewRatio.lod1Range;
+    float lod2Range = camRatio / lodsViewRatio.lod2Range;
+
+    uint isVisible = 1;
+    if (IsCameraOutsideObjBounds(_CamPosition, boundMin2, boundMax2))
+    {
+        isVisible *= _FrustumCull_On ? isInFrustum : 1;
+        isVisible *= (_LodCull_On * isVisible > 0) ? IsVisibalAfterLodCulling(minDistanceToCamera, lod2Range) : 1;
+    }
+
+    uint argsIndex = drawCall + 1;
+    argsIndex += 5 * (minDistanceToCamera > lod0Range);
+    argsIndex += 5 * (minDistanceToCamera > lod1Range);
+
+    uint shadowArgsIndex = argsIndex;
+    isCastShadow *= (minDistanceToCamera < _ShadowDistance ? 1 : 0);
+    
+    sortingData.distanceToCam = minDistanceToCamera;
+    _SortingData[tID] = sortingData;
+
+    _IsVisibleBuffer[tID] = isVisible;
+    InterlockedAdd(_ArgsBuffer[argsIndex], isVisible);
+
+    _ShadowIsVisibleBuffer[tID] = isCastShadow;
+    InterlockedAdd(_ShadowArgsBuffer[shadowArgsIndex], isCastShadow);
+}

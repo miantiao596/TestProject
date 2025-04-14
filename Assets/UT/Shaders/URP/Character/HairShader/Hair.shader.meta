@@ -1,0 +1,12 @@
+fileFormatVersion: 2
+guid: c991998494614f243883c86787e337cf
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures:
+  - _BaseMap: {instanceID: 0}
+  - _NormalMap: {instanceID: 0}
+  - _HairNosieMap: {fileID: 2800000, guid: 5a224bed032fc9a4a8b8af2a16fb106b, type: 3}
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
